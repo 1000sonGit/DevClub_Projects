@@ -1,0 +1,163 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 510px;
+    height: 51px;
+    margin: 47px 0 0 42px;   
+}
+
+.link-header{
+    width: 83px;
+    height: 21px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #17233D;
+    margin-right: 36px;
+    cursor: pointer;
+}
+
+.button-header{
+    width: 124px;
+    height: 51px;    
+    background: #6FBF44;
+    border: 1px solid #4CB538;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;    
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+.positive-image{
+    width: 595.18px;
+    height: 500px;
+    margin-left: 121px;
+    margin-top: 246px;
+    display: inline-block;
+}
+
+section{
+    display: inline-block;
+    margin-left: 84.82px;
+}
+
+h1{
+    width: 582px;
+    height: 164px;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 82px;
+    letter-spacing: 0.596154px;
+    color: #161A49;
+}
+
+p{
+    width: 493px;
+    height: 99px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    letter-spacing: 0.5px;
+    color: #4B505A;
+}
+
+.button-section{
+    width: 112px;
+    height: 27px;
+    margin-top: 55px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;    
+    color: #6FBF44;
+    cursor: pointer; 
+    background: transparent;
+    border: none;
+}
+
+@media screen and (max-width: 550px){
+
+    header{
+        width: 124px;
+        height: 51px;
+        margin: 17px 5px 17px auto;
+    }
+    
+    .link-header{
+        display: none;
+    }
+
+    .button-header{
+        width: 91px;
+        height: 31px;
+        margin-right: 5px;
+    }    
+    
+    section{
+        width: 550px;
+        height: 400px;
+        display: block;
+        margin: 5% 5%;
+    }
+
+    h1 {
+        width: 278px;
+        height: 60px;   
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 30px;        
+        text-align: center;
+        position: absolute;
+        margin: 10% 15%;
+        max-width: fit-content;
+    }
+
+    p{
+        width: 304px;
+        height: 165px;
+        margin: 0 43px;
+        font-size: 18px;
+        line-height: 33px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #4B505A;
+        position: absolute;
+        margin: 10% 15%;
+        max-width: fit-content;
+        top: 40%;
+    }
+
+    .button-section{
+        width: 112px;
+        height: 27px;        
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        color: #6FBF44;
+        position: absolute;
+        margin: 10% 30%;
+        max-width: fit-content;
+        top: 85%;
+    }
+
+    .positive-image{
+        width: 312px;
+        height: 288px;
+        position: absolute;
+        top: 590px;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    
+}
