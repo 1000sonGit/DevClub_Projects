@@ -1,0 +1,16 @@
+- Dracula
+- Material Icon Thema
+- Bracket Pair Colorizer 2 (já é nativo do VsCode é só habilitar nas configurações)
+- Live Server (Reposnsável por abrir um navegador p/ visualizar o desenvolvimento)
+- Auto Close tag
+- Auto Rename tag
+- Color Highlight
+- Code Runner
+- ESlint: serve para organizar o documento, mas o VsCode tem opção nativa de organizar.
+
+***Para o Git***
+- Git Graph
+- GitLens
+
+***Para o JS***
+- Code Runner
