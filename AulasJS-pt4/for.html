@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurar Contato</title>
+</head>
+
+<body>
+    <input placeholder="Digite o nome do contado">
+    <p></p>
+    <button onclick="buscaP()">Procurar Contato</button>
+</body>
+
+<script>
+
+    let p = document.querySelector('p')
+    let input = document.querySelector('input')
+
+    const contacts = [
+        { name: 'Rodolfo', number: '(19) 94343-3434' },
+        { name: 'Paulo', number: '(12) 93443-3434' },
+        { name: 'Aline', number: '(13) 94566-3434' },
+        { name: 'Maria', number: '(14) 94343-3476' }
+    ]
+
+    function buscaP() {
+        
+        for (let i = 0; i < contacts.length; i++) {
+
+            if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
+                p.innerHTML = `Contato ${contacts[i].name} existente no Banco de Dados`                
+                break
+            }
+            else{
+            p.innerHTML = `Contato ${input.value} não existente no Banco de Dados`}
+        }
+        
+    }
+
+</script>
+
+</html>

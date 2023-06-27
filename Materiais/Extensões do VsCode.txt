@@ -14,3 +14,4 @@
 
 ***Para o JS***
 - Code Runner
+- Snippets(tem p/ outras linguagens): Autocompleta e faz a estrutura do que for requerido.
