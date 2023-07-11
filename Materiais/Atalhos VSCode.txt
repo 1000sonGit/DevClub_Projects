@@ -1,0 +1,2 @@
+Comentar a linha que estiver o cursor ou tudo o que estiver selecionado: Ctrl + ;
+Para de rodar o servidor: Ctrl + c
