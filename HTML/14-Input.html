@@ -1,0 +1,43 @@
+<!-- INPUT 
+    disabled: não permite o preenchimento do campo
+    readonly: não permite o preenchimento do campo
+    placeholder: texto de exemplo para o preenchimento
+    value: Permite deixar um valor pré-preenchido
+    autofocus: O cursor irá focar no input que estiver com esse atributo
+-->
+<!--Primeira maneira-->
+<label>
+    Rua:
+    <input autocomplete="street-address"        
+        placeholder="Digite a sua rua"       
+    >
+</label>
+<br>
+<!--Segunda maneira-->
+<label for="rua">Rua:</label>
+<input id="rua" placeholder="Digite a sua rua">
+<br>
+<!--Input para pegar as cores-->
+<input type="color">
+<br>
+<!--Input para inserir um intervalo de valores-->
+<input type="range" min="0" max="100" valeu="50">
+<br>
+<!--Input para senha-->
+<input type="password">
+<!--Tipos de type:
+    email
+    checkbox
+    file: fazer upload de um arquivo, multiple: permite selecionar + de 1 arquivo, 
+    accept: permite aceitar só um tipo de arquivo (.mp4, .jpeg, video/*, image/*, audio/*).
+    number: só permite números.
+-->
+<h2>Qual sua rede social favorita?</h2>
+<br>
+<!--Se modificar o atributo "name", vai ser possível selecionar todos-->
+<label for="facebook">Facebook</label>
+<input type="radio" id="facebook" name="redes-sociais">
+<label for="instagram">Instagram</label>
+<input type="radio" id="instagram" name="redes-sociais">
+<label for="youtube">YouTube</label>
+<input type="radio" id="youtube" name="redes-sociais">

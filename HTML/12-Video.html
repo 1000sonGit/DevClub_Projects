@@ -1,0 +1,22 @@
+<!-- VIDEOS EM HTML-->
+
+<!--controls: habilita o controle do vídeo
+    controlsList: impede o download do vídeo
+    autoplay: o vídeo inicia assim que a página carrega
+    muted: o vídeo iniciará no mudo
+    poster: coloca uma capa no vídeo, que irá sumir assim que der o play.   
+-->
+<video src="./AULA 07 - PISOS.mp4"
+        controls
+        controlsList="nodownload"        
+        muted
+        poster="./gamer.png"
+></video>
+
+<!--Colocando mais de uma extensão para o vídeo, assim se tem uma garantia que o mesmo vai rodar-->
+<video controls>
+    <!--É possível mudar a largura e altura do vídeo com height e width-->
+    <source src="./AULA 07 - PISOS.mkv">
+    <source src="./AULA 07 - PISOS.mp4">
+    <source src="./AULA 07 - PISOS.mov">
+</video>
