@@ -18,7 +18,7 @@ const App = () => {
   const [age, setAge] = useState()
   
   function addNewUser(){
-    setUsers([{id: Math.random(), name, age}])    
+    setUsers([... users, {id: Math.random(), name, age}])    
   }
 
   function changeInputName(event){
