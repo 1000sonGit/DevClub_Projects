@@ -22,6 +22,12 @@ const App = () => {
     setUsers([...users, { id: Math.random(), name: inputName.current.value, age: inputAge.current.value }])
   }
 
+  function deleteUser(userId){
+    // Para filtrar o usuário pelo ID
+    const newUsers = users.filter(user => user.id !== userId)
+    setUsers(newUsers)
+  }
+
   return (<Container>
     <Image alt='logo-image' src={People} />
     <ContainerItens>
@@ -37,7 +43,9 @@ const App = () => {
         {users.map((user) => (
           <User key={user.id}>
             <p>{user.name}</p> <p>{user.age}</p>
-            <button><img alt="trash" src={Trash} /></button>
+            <button onClick={() => deleteUser(user.id)}>
+              <img alt="trash" src={Trash} />
+            </button>
           </User>
         ))}
       </ul>
