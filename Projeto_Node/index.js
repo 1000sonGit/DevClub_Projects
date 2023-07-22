@@ -1,13 +1,14 @@
 // Importando o express
 const express = require("express")
 const uuid = require("uuid")
+const cors = require("cors")
 
-const port = 3000
+const port = 3001
 
 // Dando um apelido para usar o express
 const app = express()
 app.use(express.json())
-
+app.use(cors())
 /*
     - Query params => meusite.com/users?name=milson&age=39 //FILTROS
     - Route params => /users/2  //BUSCAR, DELETAR OU ATUALIZAR ALGO ESPECÍFICO
