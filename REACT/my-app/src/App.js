@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import axios from 'axios';
 import {
   Container,
@@ -21,14 +21,27 @@ const App = () => {
 
   async function addNewUser() {
 
-    const data = await axios.post("http://localhost:3001/users", {
+    const { data: newUser } = await axios.post("http://localhost:3001/users", {
       name: inputName.current.value, 
       age: inputAge.current.value})
-    //setUsers([...users, { id: Math.random(), name: inputName.current.value, age: inputAge.current.value }])
-      console.log(data)
+
+    setUsers([...users, newUser])        
   }
 
-  function deleteUser(userId){
+  // Primeiro termo é uma função e o segundo é um array
+  useEffect(() => {
+    async function fetchUsers(){
+      const { data: newUser } = await axios.get("http://localhost:3001/users")
+      
+      setUsers(newUser)
+  }
+
+    fetchUsers()
+    
+  }, [])
+
+  async function deleteUser(userId){
+    await axios.delete(`http://localhost:3001/users/${userId}`)
     // Para filtrar o usuário pelo ID
     const newUsers = users.filter(user => user.id !== userId)
     setUsers(newUsers)
