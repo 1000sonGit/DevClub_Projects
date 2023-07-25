@@ -48,7 +48,7 @@ const Users = () => {
           </User>
         ))}
       </ul>
-      <Button>
+      <Button to="/">
         <img alt="seta" src={Arrow} /> Voltar 
       </Button>
     </ContainerItens>

@@ -7,12 +7,10 @@ import {
   ContainerItens,
   InputLabel,
   Input,
-  Button,
-  User
+  Button
 } from "./styles"
 import People from '../../assets/people.svg'
 import Arrow from '../../assets/arrow.svg'
-import Trash from '../../assets/trash.svg'
 
 const App = () => {
   const [users, setUsers] = useState([])
@@ -22,30 +20,24 @@ const App = () => {
   async function addNewUser() {
 
     const { data: newUser } = await axios.post("http://localhost:3001/users", {
-      name: inputName.current.value, 
-      age: inputAge.current.value})
+      name: inputName.current.value,
+      age: inputAge.current.value
+    })
 
-    setUsers([...users, newUser])        
+    setUsers([...users, newUser])
   }
 
   // Primeiro termo é uma função e o segundo é um array
   useEffect(() => {
-    async function fetchUsers(){
+    async function fetchUsers() {
       const { data: newUser } = await axios.get("http://localhost:3001/users")
-      
+
       setUsers(newUser)
-  }
+    }
 
     fetchUsers()
-    
-  }, [])
 
-  async function deleteUser(userId){
-    await axios.delete(`http://localhost:3001/users/${userId}`)
-    // Para filtrar o usuário pelo ID
-    const newUsers = users.filter(user => user.id !== userId)
-    setUsers(newUsers)
-  }
+  }, [])  
 
   return (<Container>
     <Image alt='logo-image' src={People} />
@@ -57,17 +49,9 @@ const App = () => {
       <InputLabel>Idade</InputLabel>
       <Input ref={inputAge} placeholder="Idade" />
 
-      <Button onClick={addNewUser}> Cadastrar <img alt="seta" src={Arrow} /></Button>
-      <ul>
-        {users.map((user) => (
-          <User key={user.id}>
-            <p>{user.name}</p> <p>{user.age}</p>
-            <button onClick={() => deleteUser(user.id)}>
-              <img alt="trash" src={Trash} />
-            </button>
-          </User>
-        ))}
-      </ul>
+      <Button to="/usuarios" onClick={addNewUser}>
+        Cadastrar <img alt="seta" src={Arrow} />
+      </Button>      
     </ContainerItens>
   </Container>)
 }
