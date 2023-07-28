@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
+
 import axios from 'axios';
 import {
   Container,
@@ -16,6 +18,7 @@ const App = () => {
   const [users, setUsers] = useState([])
   const inputName = useRef()
   const inputAge = useRef()
+  const history = useHistory()
 
   async function addNewUser() {
 
@@ -25,6 +28,7 @@ const App = () => {
     })
 
     setUsers([...users, newUser])
+    history.push('/usuarios')
   }
 
   // Primeiro termo é uma função e o segundo é um array
@@ -32,12 +36,13 @@ const App = () => {
     async function fetchUsers() {
       const { data: newUser } = await axios.get("http://localhost:3001/users")
 
-      setUsers(newUser)
+      setUsers(newUser)      
     }
 
     fetchUsers()
 
-  }, [])  
+  }, [])
+
 
   return (<Container>
     <Image alt='logo-image' src={People} />
@@ -49,7 +54,7 @@ const App = () => {
       <InputLabel>Idade</InputLabel>
       <Input ref={inputAge} placeholder="Idade" />
 
-      <Button to="/usuarios" onClick={addNewUser}>
+      <Button onClick={addNewUser}>
         Cadastrar <img alt="seta" src={Arrow} />
       </Button>      
     </ContainerItens>

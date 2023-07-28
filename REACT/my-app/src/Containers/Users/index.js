@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
+
 import axios from 'axios';
+
 import {
   Container,
   H1,
@@ -14,6 +17,7 @@ import Trash from '../../assets/trash.svg'
 
 const Users = () => {
   const [users, setUsers] = useState([])
+  const history = useHistory()
 
   // Primeiro termo é uma função e o segundo é um array
   useEffect(() => {
@@ -26,6 +30,10 @@ const Users = () => {
     fetchUsers()
     
   }, [])
+
+  function goBackPage() {
+    history.push('/')
+  }
 
   async function deleteUser(userId){
     await axios.delete(`http://localhost:3001/users/${userId}`)
@@ -48,7 +56,7 @@ const Users = () => {
           </User>
         ))}
       </ul>
-      <Button to="/">
+      <Button onClick={goBackPage}>
         <img alt="seta" src={Arrow} /> Voltar 
       </Button>
     </ContainerItens>
