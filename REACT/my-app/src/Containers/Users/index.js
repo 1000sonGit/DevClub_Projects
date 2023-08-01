@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
+import H1 from '../../components/Title'
 
 import axios from 'axios';
 
 import {
-  Container,
-  H1,
+  Container,  
   Image,
   ContainerItens,
   Button,
