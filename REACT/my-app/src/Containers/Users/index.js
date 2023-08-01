@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 import H1 from '../../components/Title'
+import ContainerItens from "../../components/ContainerItens";
+import Button from "../../components/Button";
 
 import axios from 'axios';
 
 import {
   Container,  
   Image,
-  ContainerItens,
-  Button,
   User
 } from "./styles"
 import Avatar from '../../assets/avatar.svg'
@@ -44,7 +44,7 @@ const Users = () => {
 
   return (<Container>
     <Image alt='logo-image' src= {Avatar} />
-    <ContainerItens>
+    <ContainerItens isBlur={true}>
       <H1>Usuários</H1>      
       <ul>
         {users.map((user) => (
@@ -56,7 +56,7 @@ const Users = () => {
           </User>
         ))}
       </ul>
-      <Button onClick={goBackPage}>
+      <Button isBack={true} onClick={goBackPage}>
         <img alt="seta" src={Arrow} /> Voltar 
       </Button>
     </ContainerItens>

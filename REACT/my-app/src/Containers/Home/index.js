@@ -1,15 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 import H1 from '../../components/Title'
+import ContainerItens from "../../components/ContainerItens";
+import Button from "../../components/Button";
 
 import axios from 'axios';
 import {
   Container,
   Image,
-  ContainerItens,
   InputLabel,
-  Input,
-  Button
+  Input
 } from "./styles"
 import People from '../../assets/people.svg'
 import Arrow from '../../assets/arrow.svg'
