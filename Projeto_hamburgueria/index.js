@@ -1,12 +1,14 @@
 // Importing the express and the ID's Generator
 const express = require("express")
 const uuid = require("uuid")
+const cors = require("cors")
 
-const port = 3000
+const port = 3001
 
 // Give a nickname to use the Express library
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 const user_request = []
 
