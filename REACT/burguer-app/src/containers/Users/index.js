@@ -47,12 +47,16 @@ const Users = () => {
       <H1>Pedidos</H1>      
       <ul>
         {users.map((user) => (
-          <User key={user.id}>
-            <p>{user.order}</p> 
-            <p class="name">{user.clientName}</p>
-            <button onClick={() => deleteUser(user.id)}>
-              <img alt="trash" src={Trash} />
-            </button>
+          <User key={user.id}>            
+              <div class="userRequest">
+                <p>{user.order}</p> 
+                <p class="name">{user.clientName}</p>
+              </div>
+              <div class="imgTrash">
+                <button onClick={() => deleteUser(user.id)}>
+                  <img alt="trash" src={Trash} />
+                </button>
+              </div>            
           </User>
         ))}
       </ul>

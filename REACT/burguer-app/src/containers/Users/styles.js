@@ -7,19 +7,19 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 5px;
 
     height: 100%;
     min-height: 100vh;
 `
 
 export const Image = styled.img`
-    margin-top: 30px;    
+    margin-top: 40px;    
 `
 
 export const User = styled.li`
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     align-content: space-around;
@@ -31,8 +31,9 @@ export const User = styled.li`
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 14px;
-    width: 342px;
-    height: 101px;
+    width: 367px;
+    min-height: 101px;
+    
 
     border: none;
     outline: none;
@@ -55,7 +56,16 @@ export const User = styled.li`
     }
 
     .name{
-            font-weight: bold;
-        } 
+        font-weight: bold;
+        }
+
+    .userRequest{
+        width: 260px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: flex-start;        
+        gap: 10px;
+    }
 
 `

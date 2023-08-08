@@ -13,7 +13,9 @@ export const Container = styled.div`
 `
 
 export const Image = styled.img`
-    margin-top: 30px;    
+    margin-top: 30px;
+    width: 342px;
+    height: 354px;
 `
 
 export const InputLabel = styled.p`
