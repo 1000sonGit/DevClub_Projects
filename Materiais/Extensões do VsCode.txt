@@ -12,6 +12,9 @@
 - Git Graph
 - GitLens
 
+***Para o Node***
+- Sucrase (permite usar a sintaxe import)
+
 ***Para o JS***
 - Code Runner
 - Snippets(tem p/ outras linguagens): Autocompleta e faz a estrutura do que for requerido.
